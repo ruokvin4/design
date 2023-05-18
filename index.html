@@ -32,7 +32,7 @@
       <button class="button">Pricing</button> 
       <button class="button">About Us</button>
       <button class="button">Log in</button>
-     <button class="button signup-button" href="https://ruokvin4.github.io/sign/"><a href="https://ruokvin4.github.io/sign/" target="_blank"></a>Sign Up</button>
+     <button class="button signup-button" onclick="openWebsite()">Sign Up</button>
     </div>
       
   </header>
@@ -71,6 +71,10 @@
         searchButton.classList.remove("active");
       }
     }
+    
+    function openWebsite() {
+            window.open("https://www.example.com", "_blank");
+        }
   </script>
 </body>
 
