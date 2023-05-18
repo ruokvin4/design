@@ -1,0 +1,237 @@
+@font-face {
+  font-family: 'sharp_groteskmedium_20';
+  src: url('sharpgrotesk-medium20-webfont.woff2') format('woff2'),
+       url('sharpgrotesk-medium20-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+
+
+
+@font-face {
+  font-family: 'sharp_groteskmedium_25';
+  src: url('sharpgrotesk-medium25-webfont.woff2') format('woff2'),
+       url('sharpgrotesk-medium25-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+
+
+
+@font-face {
+  font-family: 'sharp_grotesksemibold_25';
+  src: url('sharpgrotesk-semibold25-webfont.woff2') format('woff2'),
+       url('sharpgrotesk-semibold25-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+
+header {
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  animation: fade-in 0.3s ease-in-out forwards;
+}
+
+.logo img {
+  width: 100px;
+}
+
+.button {
+  display: flex;
+  font-family: 'sharp_groteskmedium_20';
+  border: none;
+  margin-right: 30px;
+  background-color: transparent;
+  font-size: 15px;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+
+
+
+
+.buttons{
+  display: flex;
+  padding: 0 50px;
+}
+
+
+.button:hover{
+  color: rgb(0, 183, 255);
+}
+
+
+
+.signup-button {
+  background-color: rgb(0, 183, 255);
+  padding: 10px 30px;
+  border-radius: 15px;
+}
+
+
+.signup-button:hover{
+  color: black;
+  background-color: rgb(179, 179, 179);
+}
+
+#container{
+  margin: 0px auto;
+  background-color: rgb(0, 183, 255);
+  border-color: black;
+  width: 900px;
+  border-radius: 20px;
+  align-items: center;
+  height: 30em;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  animation: forwards-up 0.4s ease-in-out forwards;
+}
+
+
+
+@keyframes forwards-up{
+  from{
+    transform: translateY(20px);
+  }
+
+
+  to{
+    transform: translateY(0px);
+  }
+}
+.h1-text{
+  display: flex;
+  font-size: 40px;
+  justify-content: center;
+  align-items: center;
+  line-height: 45px;
+  text-align: center;
+  font-family: 'sharp_grotesksemibold_25';
+  color: rgb(57, 17, 69);
+}
+
+
+.h1-text::selection{
+  background:yellow;
+  color: black;
+}
+
+
+
+@media screen and (max-width: 768px) {
+  #container {
+    width: 90%;
+    height: auto;
+  }
+
+  .h1-text {
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #container {
+    margin-top: 30px;
+  }
+
+  .h1-text {
+    font-size: 20px;
+  }
+} 
+
+
+
+@keyframes arrive {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.search-button{
+  border: none;
+  background-color: transparent;
+}
+
+.search-icon{
+  width: 20px;
+  background-color: transparent;
+}
+
+
+#search-container{
+  height: 75px;
+}
+
+
+#search-input{
+  font-family: 'sharp_groteskmedium_20';
+  padding: 10px;
+  padding-left: 15px;
+  border-radius: 12px;
+  background-color: rgb(212, 195, 195);
+  border: none;
+  width: 150px;
+  margin: 15px 0;
+  display: flex;
+  justify-content: center;
+}
+
+input:focus{
+  outline: none;
+  border: none;
+}
+
+
+#search-container {
+  animation: fade-in 0.3s ease-in-out forwards;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-out {
+  animation: fade-out 0.3s ease-in-out forwards;
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}

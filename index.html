@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Design</title>
+  <link rel="stylesheet" href="Fonts/specimen_files/specimen_stylesheet.css" type="text/css" charset="utf-8"/>
+  <link rel="stylesheet" href="Font/stylesheet.css" type="text/css" charset="utf-8"/>
+  <link rel="stylesheet" href="styles/style.css" charset="utf-8">
+</head>
+<body>
+  <header>
+    <div class="buttons">
+      <button class="button">Illustrations</button>
+      <button class="button">Mockups</button>
+      <button class="button">Smart Layouts</button>
+      <button class="search-button" onclick="toggleSearch()"><img class="search-icon" src="assets/search.png"></button>
+    </div>
+    
+
+    <div id="search-container" style="display: none;">
+      <input type="text" id="search-input" placeholder="Search" autofocus>
+    </div>
+
+
+
+    <div class="logo">
+      <img class="logo-icon" id="logo-container"src="assets/logo.png" alt="Logo">
+    </div>
+    <div class="buttons">
+      <button class="button">Pricing</button> 
+      <button class="button">About Us</button>
+      <button class="button">Log in</button>
+     <button class="button signup-button"><a href="Sign in/index.html" target="_self"></a>Sign Up</button>
+    </div>
+      
+  </header>
+  <div id="container">
+    <h1 class="h1-text">
+      This is the Future of the Designs. <br>
+      Scroll Down!</h1>
+  </div>
+  
+
+  <script>
+    window.addEventListener("DOMContentLoaded", function() {
+      var textElement = document.querySelector(".h1-text");
+      setTimeout(function() {
+        textElement.style.animation = "none"; // Disable the arrival animation initially
+        textElement.offsetHeight; // Trigger reflow
+        textElement.style.animation = null; // Enable the arrival animation
+      }, 100);
+    });
+
+
+    function toggleSearch() {
+      var logoContainer = document.getElementById("logo-container");
+      var searchContainer = document.getElementById("search-container");
+      var searchButton = document.querySelector(".search-button");
+      var searchInput = document.getElementById("search-input");
+      
+      if (searchContainer.style.display === "none") {
+        logoContainer.style.display = "none";
+        searchContainer.style.display = "block";
+        searchButton.classList.add("active");
+        searchInput.focus();
+      } else {
+        logoContainer.style.display = "block";
+        searchContainer.style.display = "none";
+        searchButton.classList.remove("active");
+      }
+    }
+  </script>
+</body>
+
+</html>
